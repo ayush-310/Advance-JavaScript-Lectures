@@ -1,0 +1,45 @@
+<!-- #15 Advance JavaScript Ajax Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#15 Advance JavaScript Ajax Tutorial</h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <img src="./img4.png" alt="">
+    <img src="./img5.png" alt="">
+    <img src="./img6.png" alt="">
+
+    <p id="para"></p>
+    <button onclick="fetchData()">Click Me</button>
+    <script>
+        //    Example1
+        const fetchData = () => {
+            let ajaxHttp = new XMLHttpRequest();
+
+            ajaxHttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    document.getElementById("para").innerHTML = this.responseText;
+                }
+                else if (this.readyState == 4 && this.status == 404) {
+                    console.log(this.responseText);
+                    document.getElementById("para").innerHTML = "Data Not Found";
+                }
+            }
+            
+            // ajaxHttp.open("GET", "content.txt", true);
+            ajaxHttp.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+            ajaxHttp.send();
+        }
+    </script>
+</body>
+
+</html>

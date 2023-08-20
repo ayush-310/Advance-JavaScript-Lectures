@@ -1,0 +1,83 @@
+<!-- #14 Advance JavaScript Promise All Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#14 Advance JavaScript Promise All Tutorial </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <script>
+        // let pro_1 = new Promise(function (success, reject) {
+        //     setTimeout(() => {
+        //         console.log(`This is the first promise function successfully`);
+        //         success(`First is Working !!`);
+        //     },1000)
+        // })
+
+        // let pro_2 = new Promise(function (success, reject) {
+        //     setTimeout(() => {
+        //         console.log(`This is the second promise function successfully`);
+        //         success(`Second is Working !!`);
+        //     },2000)
+        // })
+
+
+        // let pro_3 = new Promise(function (success, reject) {
+        //     setTimeout(() => {
+        //         console.log(`This is the third promise function reject`);
+        //         reject(`Third is not Working !!`);
+        //     },3000)
+        // })
+
+
+        // Promise.all([pro_1, pro_2,pro_3]).then((success)=>{
+        //     console.log(success);
+        // }).catch((error)=>{
+        //     console.log(error);
+        // });
+
+
+        // -----------------------------------
+
+
+        let promiseAll = (successData, stepData, condition) => {
+            return function (success, reject) {
+                setTimeout(() => {
+                    if (condition === "success") {
+                        console.log(`This is the ${stepData} promise function successfully`);
+                        success(successData);
+                    } else {
+                        console.log(`This is the ${stepData} promise function reject`);
+                        reject("Data  is not Working !!");
+                    }
+                }, successData * 100)
+            }
+        }
+
+
+        let pro_1 = new Promise(promiseAll(10, "First", "success"));
+        let pro_2 = new Promise(promiseAll(20, "Second", "success"));
+        let pro_3 = new Promise(promiseAll(30, "Third", "success"));
+        let pro_4 = new Promise(promiseAll(30, "Four", "reject"));
+
+        let total = 0;
+        Promise.all([pro_1, pro_2, pro_3]).then((success) => {
+            for (let i in success) {
+                total += success[i];
+            }
+            console.log(`Success promise : ${success}`);
+            console.log(`Total : ${total}`);
+        }).catch((error) => {
+            console.log(error);
+        });
+    </script>
+</body>
+
+</html>

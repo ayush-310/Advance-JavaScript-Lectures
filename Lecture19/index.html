@@ -1,0 +1,98 @@
+<!-- #19 Advance JavaScript Iterators Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#19 Advance JavaScript Iterators Tutorial</h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <script>
+        // // 1)
+        // let a = ["One" ,"Two", "Three"];
+        // console.log(a)
+        // console.log(typeof a[Symbol.iterator])
+
+        // let b = a[Symbol.iterator]();
+        // console.log(b)
+        // console.log(b.next());
+        // console.log(b.next());
+        // console.log(b.next());
+        // console.log(b.next());
+
+
+        // // 2)
+        // let a = ["One" ,"Two", "Three"];
+        // let b = a[Symbol.iterator]();
+
+        // b.next();
+        // b.next();
+        // console.log(`Test`);
+        // console.log(`Testing`);
+        // console.log(b.next());
+
+
+        // // 3)
+        // let a = ["One", "Two", "Three"];
+        // let b = a[Symbol.iterator]();
+
+        // b.next();
+        // b.next();
+        // console.log(b.next().value);
+        // console.log(b.next().done);
+
+
+        //     // 4)
+        //     let a = "Code4Education";
+        //     let b = a[Symbol.iterator]();
+
+        //     let response = b.next();
+        //     // console.log(response.value);
+
+        //    while(!response.done){
+        //     console.log(response.value);
+        //     response = b.next();
+        //    }
+
+
+        // // 5)
+        // let a = "Code4Education";
+        // // let b = a[Symbol.iterator]();
+
+        // for(let res of a){
+        //     console.log(res);
+        // }
+
+
+        // 6)
+        const customFunction = (res) => {
+            let intialValue = 0;
+            return {
+                next() {
+                    return {
+                        value: res[intialValue++],
+                        done: intialValue < res.length + 1 ? false : true
+                    }
+                }
+            }
+        }
+
+        let a = ["One" ,"Two", "Three", "Four", "Five"]
+        let b = customFunction(a);
+        console.log(b.next());
+        console.log(b.next());
+        console.log(b.next());
+        console.log(b.next());
+        console.log(b.next());
+        console.log(b.next());
+
+    </script>
+</body>
+
+</html>

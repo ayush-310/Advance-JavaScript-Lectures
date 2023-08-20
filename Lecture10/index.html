@@ -1,0 +1,79 @@
+<!-- #10 Advance JavaScript OOP Introduction Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>#10 Advance JavaScript OOP Introduction </h2>
+    <img src="./img1.png"  alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <img src="./img4.png" alt="">
+    <img src="./img5.png" alt="">
+    <img src="./img6.png" alt="">
+    <script>
+        // 1)
+        // class start{
+        //     count(){
+        //         console.log("Hello Everyone!!")
+        //     }
+
+        //     print(){
+        //         console.log("Bhaskar Gupta")
+        //     }
+        // }
+
+        // let fun = new start();
+        // fun.count();
+        // fun.print();
+
+
+        // 2)
+        // class start{
+        //     constructor(){
+        //         console.log("Constructor Function!")
+        //     }
+
+        //     show(){
+        //         console.log("Welcome Back to The" + this.title)
+        //     }
+        // }
+        // let fun = new start();
+        // fun.title = "Code4Education";
+
+        // fun.show();
+
+
+        // 3)
+        class start{
+            constructor(name,subs){
+                this.title = name;
+                this.subNumber = subs;
+                console.log("Constructor Function!")
+            }
+
+            show(){
+                console.log(`Welcome Back to The ${this.title} Subscribers ${this.subNumber}`);
+            }
+
+            static thirdMethod(){
+                console.log("Static Method Function")
+            }
+        }
+        
+        let fun = new start("Code4Education", 24000);
+        let zz = new start("Bhaskar Gupta", 2543);
+
+        fun.show();
+        zz.show();
+
+        // fun.thirdMethod();---> don't work
+        start.thirdMethod();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!-- #5 Advance JavaScript Rest Operator Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h2>#5 Advance JavaScript Rest Operator </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <script>
+        // Old way 
+        // let numbers = [1,2,3,4,5];
+        let numbers = ["Ayush", 3, 4, 5];
+        function total(toAdd) {
+            let result = 0;
+            for (let i = 0; i < toAdd.length; i++) {
+                result += toAdd[i];
+            }
+            return result;
+        }
+        console.log(total(numbers));
+
+        // ---------------------------------
+
+        function demo() {
+            console.log(arguments);
+        }
+        demo(20, 40, 60);
+
+        // -------------------------------------
+
+
+        function demo() {
+            let demo = 0;
+            for (let i in arguments) {
+                demo += arguments[i];
+            }
+            console.log(demo);
+        }
+        // demo(20,40,60);
+        demo("Bhaskar", 20, 40, 60);
+
+
+        //  --------------------------
+
+        function demo(title, ...args) {
+            let demo = 0;
+            for (let i in args) {
+                demo += args[i];
+            }
+            console.log(arguments);
+            console.log(demo);
+            console.log(`Welcome back ${title}`);
+            console.log(`Welcome back ${args}`);
+        }
+
+        demo("Bhaskar", 20, 40, 60);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

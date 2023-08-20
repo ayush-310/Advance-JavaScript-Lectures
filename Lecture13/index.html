@@ -1,0 +1,76 @@
+<!-- #13 Advance JavaScript Promise Tutorial In Hindi | -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#13 Advance JavaScript Promise Tutorial </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <img src="./img4.png" alt="">
+    <script>
+        // Example
+
+        // let status = true;
+
+        // let pro = new Promise(function (success, reject) {
+
+        //     if (status) {
+        //         success(`It's Working !!`)
+        //     } else {
+        //         reject(`It's not Working`)
+        //     }
+        // })
+
+        // console.log(pro);
+
+        // -------------------------------
+
+
+        function pro(status) {
+            return pro = new Promise(function (success, reject) {
+                console.log("Loading...");
+                setTimeout(() => {
+                    if (status) {
+                        success(`It's Working !!`)
+                     } else {
+
+                        reject(`It's not Working`)
+                    }
+                }, 1200)
+            })
+
+        }
+
+        // console.log(pro(true));
+        // console.log(pro(false));
+
+        // let onFulfiled = (success) => {
+        //     console.log(success);
+        // };
+        // let onRejected = (error) => {
+        //     console.log(error);
+        // };
+
+        // pro(false).then(onFulfiled).catch(onRejected);
+        // pro(true).then(onFulfiled).catch(onRejected);
+
+          
+        pro(true).then((success) => {
+            console.log(success);
+        }).catch((error) => {
+            console.log(error);
+        });
+
+
+
+    </script>
+</body>
+
+</html>

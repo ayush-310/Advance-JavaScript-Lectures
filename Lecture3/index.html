@@ -1,0 +1,64 @@
+<!-- #3 Advance JavaScript Template String and Literals In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> Advance JavaScript Template String and Literals </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <script>
+
+        //1) Normal Concat Example
+        let a = "Code4Education"
+        console.log("Hello" + " " + a)
+
+        // 2)
+        a = "Code4Education"
+        console.log(`Hello ${a} Youtube Channel`)
+
+        // 3)
+        a = `Hello 
+     Code4Education 
+                 Youtube Channel`;
+        console.log(a);
+        document.write(a);
+
+        document.write("<br>");
+
+        // 4)
+        a ="Hello"
+        let b = "Code4Education"
+        let c = "Youtube Channel"
+
+        console.log(`${a} ${b} ${c}`)
+        document.write(`${a} ${b} ${c}`);
+
+
+        document.write("<br>");
+         
+
+        // 5)
+        let first_string_1 = "Welcome Back to";
+        let second_string_2 = "Code4Education";
+
+        function demo(string_1, string_2){
+            return `${string_1} ${string_2}`
+        }
+
+        let x = `Hello ${demo(first_string_1,second_string_2)}`;
+
+        console.log(x)
+        document.write(x)
+
+
+    </script>
+</body>
+
+</html>

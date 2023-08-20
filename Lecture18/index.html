@@ -1,0 +1,58 @@
+<!-- #18 Advance JavaScript Symbol Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>#18 Advance JavaScript Symbol </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <script>
+        // 1)
+        // let a = Symbol()
+        // console.log(typeof a)
+
+        // 2)
+        // let a = Symbol("Code4Education")
+        // console.log(a)
+
+        // 3)
+        // let a = Symbol("Code4Education")
+        // console.log(typeof a)
+
+        // // 4)
+        // let a = Symbol("Code4Education")
+        // let b = Symbol("Code4Education")
+        // console.log(a == b);
+        // let d = "Code4Education"
+        // let c = "Code4Education"
+        // console.log(c == d);
+
+        // // 5)
+        // let a = Symbol("Code4Education")
+        // console.log(a);
+        // // alert(a)
+        // // alert(a.toString())
+        // alert(a.description)
+
+        // 6)
+        let a = Symbol("test")
+        let b = {
+            name: "Code4Education",
+            [a]:"26K"
+        }
+        b[a] = "26k"
+        console.log(b);
+        console.log(b.name);
+        console.log(b.a);
+        console.log(b[a]);
+        // alert(a)
+        // alert(a.toString())
+        // alert(a.description)
+    </script>
+</body>
+</html>

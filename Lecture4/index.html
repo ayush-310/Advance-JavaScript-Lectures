@@ -1,0 +1,95 @@
+<!-- #4 Advance JavaScript Arrow Function Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#4 Advance JavaScript Arrow Function Tutorial </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <button>Click Me</button>
+    <script>
+        // 1) Normal Function
+        let demo = function (text) {
+            return `Hello ${text}`;
+        }
+        console.log(demo("Everyone"))
+
+        // 2)Arrow Function
+        let fn = (text) => {
+            return `Hello ${text}`;
+        }
+        console.log(fn("Everyone, Welcome Back!"))
+
+
+        // 3)
+        fn = (text) => `Hello ${text}`;
+        console.log(fn("Everyone, Welcome Back! Code$education"))
+        console.log(typeof (fn))
+
+        // 4)
+        fn = () => console.log("Everyone, Welcome Back! Code$education")
+        console.log(fn)
+        console.log(typeof (fn))
+
+        // 5)
+        let fm = () => {
+            let a = 5;
+            let b = 5;
+            return a + b;
+        }
+        console.log(fm())
+
+        //    ---------------------
+
+        fm = (a, b) => {
+            let c = 5;
+            let d = 5;
+            return a + b;
+        }
+        console.log(fm(50, 50))
+
+        // ---------------------
+
+        fm = (a, b) => a + b;
+        console.log(fm(150, 50))
+
+        // 6)
+        setTimeout(() => console.log("Hello"),1)
+
+        // 7)
+        // Normal function 
+        function fun(){
+            console.log(this);
+        }
+        fun();
+
+        // Arrow function 
+        let mun = ()=> console.log(this);
+        mun();
+
+        // 8)
+        // let button = document.querySelector("button");
+
+        // function run(){
+        //     console.log(this);
+        // }
+
+        //  button.addEventListener("click",run)
+
+        // --------------------------
+
+        let button = document.querySelector("button");
+        let bun = () => console.log(this);
+         button.addEventListener("click",bun)
+
+
+    </script>
+</body>
+
+</html>

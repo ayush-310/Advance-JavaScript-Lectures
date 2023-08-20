@@ -1,0 +1,89 @@
+<!-- #17 Advance JavaScript Async & Await Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#17 Advance JavaScript Async & Await </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <script>
+        // Example
+        // 1)
+        // async function demo(){
+        //     return "Hello Everyone!!"
+        // }
+
+        // -----------------
+
+        // let demo = async function(){
+        //     return "Hello Everyone!!"
+        // }
+
+        // --------------------------
+
+        // let demo = async () => {
+        //     return "Hello Everyone!!"
+        // }
+
+        // --------------------------------
+
+        // let demo = async () => "Hello Everyone!!";
+
+        // console.log(demo());
+        // demo().then((success)=>{
+        //     console.log(success);
+        // })
+
+
+        // // 2)
+        // async function demo() {
+        //     console.log("2: Test");
+        //     await console.log("3: Test");
+        //     console.log("4: Test");
+        // }
+        // console.log("1: Test");
+        // demo();
+        // console.log("5: Test");
+
+
+        // 3)
+        // async function demo() {
+        //     console.log("2: Test");
+        //     const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        //     console.log("3: Test");
+        //     const result = await res.json();
+
+        //     return result;
+        // }
+        // console.log("1: Test");
+        // const data = demo();
+        // console.log("4: Test");
+        // console.log("Response:", data);
+        // data.then((success) => {
+        //     console.log(success);
+        // }).catch((error) => {
+        //     console.log("Data Not Found");
+        // })
+
+        //  4)
+        async function demo() {
+            return (await fetch("https://jsonplaceholder.typicode.com/users")).json();
+        }
+        const data = demo();
+        data.then((success) => {
+            console.log(success);
+        }).catch((error) => {
+            console.log("Data Not Found");
+        })
+
+    </script>
+</body>
+
+</html>

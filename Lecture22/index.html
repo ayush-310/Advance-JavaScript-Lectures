@@ -1,0 +1,74 @@
+<!-- #22 Advance JavaScript Error Handling Tutorial In Hindi | -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#22 Advance JavaScript Error Handling </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <img src="./img4.png" alt="">
+    <script>
+        // 1)
+        // try{
+        //     console.log(`Journey of Start`)
+        //     random;
+        //     console.log(`Journey of end`)
+        // } catch(error){
+        //     console.log(error)
+        // }
+
+        // // 2)
+        // try{
+        //     random();
+        // }catch(error){
+        //     console.log(error.name);
+        //     console.log(error.message);
+        //     console.log(error.stack);
+        // }
+
+
+
+        // // 3)
+        // try{
+        //     random();
+        // }catch(error){
+        //    if(error instanceof ReferenceError){
+        //     console.log("RefrenceError");
+        //    }else if(error instanceof TypeError){
+        //     console.log("TypeError")
+        //    } else {
+        //     console.log("Unknown Error")
+        //    }
+        // }
+
+
+        // 3)
+        try {
+            // let json = '{"name":"Code4Education", "subs":"26k", "Owner":"Ayush"}'
+            let json = '{"user_name":"Code4Education", "subs":"26k", "Owner":"Ayush"}'
+            let obj = JSON.parse(json);
+         
+            if(!obj.name){
+                throw new Error("Name not Found !!")
+            }
+
+            console.log(obj.name);
+            console.log(obj.subs);
+            console.log(obj.Owner);
+
+        } catch (error) {
+           console.log(error);
+        }finally{
+            console.log(`hffvnv`)
+        }
+    </script>
+</body>
+
+</html>

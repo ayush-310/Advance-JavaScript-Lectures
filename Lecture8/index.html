@@ -1,0 +1,77 @@
+<!-- #8 Advance JavaScript Destructuring Array Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#8 Advance JavaScript Destructuring Array Tutorial </h2>
+    <img src="./img1.png" alt="">
+    <script>
+        // Method 1
+        // let data = ["Code4Education", 24000, "India"];
+
+        // let title = data[0];
+
+        // console.log(data);
+        // console.log(title);
+
+        // ----------------------------
+
+        // Method 2
+        // let data = ["Code4Education", 240000, "India", ["Bhaskar Gupta", "Delhi"]];
+
+        // let [title, subscriber = 10000000, country, [owner, city]] = data;
+
+        // console.log(title);
+        // console.log(subscriber);
+        // console.log(country);
+        // console.log(owner);
+        // console.log(city);
+
+        // ----------------------------
+
+        // Method 3
+        // let data = ["Code4Education", 240000, "India", ["Bhaskar Gupta", "Delhi"]];
+
+        // let [title, ...args] = data;
+
+        // console.log(title);
+        // console.log(args);
+
+        // --------------------------
+
+        // Method 4        
+        // function data([title, sub, country]) {
+        //     console.log(title)
+        //     console.log(sub)
+        //     console.log(country)
+        // }
+
+        // data(["Code4Education", 24000, "India"]);
+
+        // ---------------------------
+
+        // Method 5        
+        function data() {
+            return ["Code4Education",24000,"India"]
+        }
+
+        let [title, sub, country] = data();
+
+        console.log(title)
+        console.log(sub)
+        console.log(country)
+
+       
+
+
+
+    </script>
+</body>
+
+</html>

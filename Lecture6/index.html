@@ -1,0 +1,76 @@
+<!-- #6 Advance JavaScript Spread Operator Tutorial In Hindi | -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#6 Advance JavaScript Spread Operator </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+
+    <script>
+
+        function demo(title, ...args) {
+            let demo = 0;
+            for (let i in args) {
+                demo += args[i];
+            }
+        }
+        // demo("Code4Education", ...arr)
+
+
+        // let arr1 = [20, 40, 60];
+        // let arr2 = arr1;
+        // console.log(...arr1);
+        // arr1.push(100, 150)
+        // console.log(arr2);
+        // console.log([...arr2]);
+
+        // ---------------------------
+
+        // let arr1 = [20, 40, 60];
+        // let arr2 = [...arr1];
+        // arr1.push(100, 150)
+        // console.log(arr1);
+        // console.log(arr2);
+        // // console.log([...arr2]);
+
+        // ----------------------------
+
+        let arr1 = [20, 40, 60];
+        let arr2 = [80, 100];
+        // let arr3 = arr1.concat(arr2);
+        let arr3 = [...arr1, ...arr2, 200];
+        console.log(arr3);
+
+
+        // ------------------------------
+
+        let obj1 = {
+            name: "Code4Education",
+            owner: "Bhhaskar"
+        }
+
+        let obj2 = {
+            title: "YouTube"
+        }
+
+        let obj3 = { ...obj1, ...obj2 }
+        console.log(obj3)
+
+        //  ---------------------------
+
+        let ar1 = [20,40,60,80,100];
+        console.log(...ar1)
+        console.log(Math.max(...ar1))
+
+
+    </script>
+</body>
+
+</html>

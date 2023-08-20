@@ -1,0 +1,100 @@
+<!-- #20 Advance JavaScript Generators Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#20 Advance JavaScript Generators </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <script>
+        // // 1)
+        // function *gen(){
+        //     console.log("One")
+        //     console.log("Two")
+        //     console.log("Three")
+        // }
+
+        // let a = gen();
+        // console.log(a.next())
+
+
+        // // 2)
+        // function *gen(){
+        //     yield("One")
+        //     yield("Two")
+        //     yield("Three")
+        //     yield("Four")
+        // }
+
+        // let a = gen();
+        // console.log(a.next());
+        // a.next()
+        // a.next()
+        // console.log(a.next());
+
+
+        // // 3)
+        // function *gen(){
+        //     let res = (yield)/10;
+        //     console.log(`Response : ${res}`);
+        // }
+
+        // let a = gen();
+        // a.next()
+        // a.next(500)
+
+
+
+        // // 4)
+        // function *gen(){
+        //     let arr = [yield, yield, yield];
+        //     console.log(`Response : ${arr}`);
+        //     console.log(`Response : ${arr[1]}`);
+        // }
+
+        // let a = gen();
+        // a.next()
+        // a.next(100)
+        // a.next(200)
+        // a.next(300)
+
+
+        // // 5)
+        // function* gen() {
+        //     yield 100
+        //     yield ["JS", "ReactJS", "NodeJS"];
+        //     yield* ["JS", "ReactJS", "NodeJS"];
+        // }
+
+        // let a = gen();
+        // console.log(a.next())
+        // console.log(a.next())
+        // console.log(a.next())
+        // console.log(a.next())
+        // console.log(a.next())
+        // console.log(a.next())
+
+
+        // 6)
+        function* gen() {
+            yield 100
+            yield "JS"
+            yield "ReactJS"
+            yield "NodeJS"
+        }
+
+        let a = gen();
+        console.log(a.next())
+        console.log([...a])
+        console.log(a.return("Function Ended..."))
+ 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!-- #11 Advance JavaScript Class Inheritance Tutorial In Hindi -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#11 Advance JavaScript Class Inheritance </h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <script>
+        // Example1 
+        // class school{
+        //     constructor(){
+        //         console.log("Constructor : School")
+        //     }
+        // }
+        // let a = new school();
+
+        // ---------------------------
+
+        // class school {
+        //     constructor(name) {
+        //         console.log(`Constructor : School ${name}`)
+        //     }
+        // }
+
+        // class professor extends school {
+
+        // }
+
+        // // let a = new professor();
+        // let a = new professor("Delhi : Govt");
+
+        // -----------------------------
+
+
+        // class school {
+        //     constructor(name) {
+        //         console.log(`Constructor : School ${name}`)
+        //     }
+        // }
+
+        // class professor extends school {
+        //     constructor(name) {
+        //         super();
+        //         console.log(`Constructor : Teacher ${name}`)
+        //     }
+        // }
+
+        // // let a = new professor();
+        // // let a = new professor("Delhi : Govt");
+        // let a = new professor("Bhaskar");
+
+
+        // -------------------------
+
+
+        // class school {
+        //     constructor(name) {
+        //         this.protitle = name;
+        //         console.log(`Constructor : School ${this.protitle}`)
+        //     }
+        // }
+
+        // class professor extends school {
+        //     // constructor(name) {
+        //     //     super();
+        //     //     console.log(`Constructor : Teacher ${name}`)
+        //     // }
+        // }
+
+        // // let a = new professor();
+        // // let a = new professor("Delhi : Govt");
+        // let a = new professor("Bhaskar");
+
+
+        // -------------------------------
+
+
+        class school {
+            constructor(name) {
+                this.protitle = name;
+                console.log(`Constructor : School ${this.protitle}`)
+            }
+
+            students() {
+                console.log(`Prototype-1 : School ${this.protitle}`)
+            }
+        }
+
+        class professor extends school {
+            students() {
+                super.students();
+                console.log(`Prototype-2 : Teacher ${this.protitle}`)
+            }
+        }
+
+
+        let a = new professor("Bhaskar");
+        a.students();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!-- #7 Advance JavaScript Object Literals Tutorial In Hindi  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>#7 Advance JavaScript Object Literals Tutorial</h2>
+    <img src="./img1.png" alt="">
+    <img src="./img2.png" alt="">
+    <img src="./img3.png" alt="">
+    <img src="./img4.png" alt="">
+    <script>
+        // Old method Example
+        let name = "Code4Education";
+        let n = "name";
+        let owner = "Bhaskar";
+        let obj = {
+            // name: name,
+            // owner: owner
+
+            // ------------
+
+            // name,
+            // owner
+
+            // -------------
+
+            // [n]: "Code4Education",
+            // owner:"Bhaskar Gupta"
+
+            // ----------------
+
+            [n + "_name"]: "Code4Education",
+            owner: "Bhaskar Gupta",
+
+            // Older way 
+            // fees: function () {
+            //     return `${this.name_name} ${this.owner}`
+            // }
+
+            // ------------------------
+
+            ['fees count']: function () {
+                return `${this.name_name} ${this.owner}`
+            }
+
+        };
+        console.log(obj)
+        // console.log(obj.fees())
+        // console.log(obj['fees']())
+        console.log(obj['fees count']())
+
+
+        let title = "Code4Education";
+        let title2 = "Bhaskar Gupta";
+
+
+        const channel = (name,owner) => {
+            return{
+                name,
+                owner
+            }
+        }
+
+        console.log(channel(title,title2))
+
+
+    </script>
+</body>
+
+</html>
